@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-u8-Ph2">
+                                <rect key="frame" x="0.0" y="0.0" width="612" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-py-DeO">
+                                <rect key="frame" x="60" y="418" width="492" height="414"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-pm-u9L">
+                                        <rect key="frame" x="0.0" y="0.0" width="492" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fGT-x2-9Ix"/>
+                                            <constraint firstAttribute="width" id="glE-1g-xZG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osF-Rc-cDd">
+                                        <rect key="frame" x="0.0" y="50" width="492" height="284"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83w-Zf-OMN">
+                                        <rect key="frame" x="0.0" y="334" width="492" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="E5U-Pn-ZKk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDg-mD-we0">
+                                        <rect key="frame" x="0.0" y="374" width="492" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="olL-C4-2wO"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Get New Random Quote!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTappedNewRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKR-Nl-Wvr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ofv-u8-Ph2" secondAttribute="bottom" id="1SD-EB-35c"/>
+                            <constraint firstItem="ofv-u8-Ph2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BHT-hv-U97"/>
+                            <constraint firstItem="Ne0-py-DeO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="374" id="Fpe-39-n7p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ne0-py-DeO" secondAttribute="trailing" constant="60" id="Npa-BH-FuV"/>
+                            <constraint firstItem="Ne0-py-DeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="SpD-0Z-P7s"/>
+                            <constraint firstItem="ofv-u8-Ph2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zca-Gu-8L1"/>
+                            <constraint firstItem="Ne0-py-DeO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dF7-9q-SJH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ne0-py-DeO" secondAttribute="bottom" constant="30" id="pxK-WE-lre"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofv-u8-Ph2" secondAttribute="trailing" id="s39-pQ-4QI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="83w-Zf-OMN" id="eh8-jo-JuP"/>
+                        <outlet property="newRandomQuoteButton" destination="WDg-mD-we0" id="AQN-t1-Taj"/>
+                        <outlet property="quoteLabel" destination="osF-Rc-cDd" id="T8B-ZY-4dA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="612" height="417"/>
+        <image name="quote" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
